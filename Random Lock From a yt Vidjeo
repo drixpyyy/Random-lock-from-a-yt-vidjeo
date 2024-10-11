@@ -31,7 +31,6 @@ local GetClosestPlayer = Function() -- // Optimized GetClosestPlayer i Belive?
           end
           Root = (Vector2.new(Mouse.X, Mouse.Y)) - Vector2.new(Root.X, Root.Y,))
           if Root < ClosestDistance then
-            ClosestPlayer = ClosestPlayer
             ClosestPlayer = Player
             ClosestDistance = Root 
           end
@@ -46,7 +45,7 @@ Mouse.KeyDown:Connect(function(key) -- Get Our Closest player (Toggle)
     end
 end)
 
-RunService.RenderStepped:Connect(function ()
+RunService.RenderStepped:Connect(function()
     if not Player then
         return
     end
