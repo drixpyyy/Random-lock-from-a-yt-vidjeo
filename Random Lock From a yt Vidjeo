@@ -49,6 +49,8 @@ RunService.RenderStepped:Connect(function()
     if not Player then
         return
     end
+    if not Aimbot.Status then
+    Return
     Local Hitpart = Player.Character:FindFirstChild(Aimbot.Hitpart)
     if not Hitpart then
         return
